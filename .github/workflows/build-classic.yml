@@ -34,7 +34,7 @@ jobs:
 
       - name: "Build classic firmware"
         run: |
-          . $HOME/.nix-profile/etc/profile.d/nix.sh
+          # . $HOME/.nix-profile/etc/profile.d/nix.sh
           nix-shell --run "poetry install"
           nix-shell --run "poetry run ./legacy/script/setup"
           nix-shell --run "export FIRMWARE_QA=1 && poetry run ./legacy/script/cibuild"
